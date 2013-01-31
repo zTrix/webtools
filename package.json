@@ -1,0 +1,22 @@
+{
+  "author": "zTrix",
+  "name": "ztrix-tools",
+  "description": "Web Tools Collection",
+  "version": "0.0.1",
+  "private": true,
+  "homepage": "http://ztrix-tools.nodester.com",
+  "node": "0.8.1",
+  "repository": {
+    "url": "defaultapp"
+  },
+  "main": "server.js",
+  "dependencies": {},
+  "devDependencies": {},
+  "optionalDependencies": {},
+  "engines": {
+    "node": "*"
+  },
+  "scripts": {
+    "start": "node server"
+  }
+}
