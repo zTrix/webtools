@@ -24,6 +24,7 @@ var server = http.createServer(function (req, res) {
     }
 
     send(req, pathname).root(root).maxage(MAX_AGE).on('error', error).pipe(res);
+    console.log(Util.getTime() + ' ' + req.method + ' ' + req.url);
 });
 
 server.on('error', function (e) {

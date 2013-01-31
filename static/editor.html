@@ -4,12 +4,32 @@
     <title>Code Editor</title>
 </head>
 <body>
-    <script src="//ajax.googleapis.com/ajax/libs/jquery/1.9.0/jquery.min.js"></script>
-    <script>window.jQuery || document.write('<script src="js/jquery.js"><\/script>')</script>
-    <script type="application/javascript">
-        $.address.change(function (event) {
-            console.log(event);
-        });
+    <style type="text/css">#e{position:absolute;top:0;right:0;bottom:0;left:0;}</style>
+    <div id="e"></div>
+    <script src="http://d1n0x3qji82z53.cloudfront.net/src-min-noconflict/ace.js" type="text/javascript" charset="utf-8"></script>
+    <script type="text/javascript">
+        var defaultLang = "python";
+        var render = function () {
+            var lang = window.location.hash.toLowerCase().substr(1);
+            if (!lang in ["python", "ruby", "c_cpp", "javascript", "java", "scala", "markdown", "coffee"]) {
+                lang = defaultLang;
+            }
+            var e = ace.edit("e");
+            e.setTheme("ace/theme/monokai");
+            document.getElementById('e').style.fontSize='14px';
+            e.getSession().setUseSoftTabs(true);
+            e.setShowPrintMargin(false);
+            e.getSession().setTabSize(4);
+            e.getSession().setMode("ace/mode/" + lang);
+        };
+        if ("onhashchange" in window) {
+            window.onhashchange = render;
+        }
+        if (!window.location.hash) {
+            window.location.hash = "#python";
+        } else {
+            render();
+        }
     </script>
 </body>
 </html>
