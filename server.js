@@ -8,7 +8,7 @@ var http = require('http'),
 
 var Util = require('./util');
 
-const MAX_AGE = 3600;
+var MAX_AGE = 3600;
 
 var server = http.createServer(function (req, res) {
     var root = path.join(__dirname, 'static');
