@@ -1,0 +1,9 @@
+
+.wrapper {
+    width: 1000px;
+    margin: auto;
+}
+
+.wrapper > .title {
+    text-align: center;
+}

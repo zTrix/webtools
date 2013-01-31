@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/html">
+    <head>
+        <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+        <meta name="keywords" content=""/>
+        <meta name="description" content="Web Tools Collection from zTrix"/>
+        <link rel="stylesheet" type="text/css" href="css/index.css" />
+        <title>Web Tools</title>
+    </head>
+
+    <body>
+        <div class="wrapper">
+            <h1 class="title">Web Tools Collection zTrix</h1>
+            <ul>
+
+                <ol>
+                    Text Editor
+                    <li>
+                        <a href="data:text/html, <textarea style='font-size: 1.5em; width: 100%; height: 100%; border: none; outline: none' autofocus />">Plain Text Editor</a>
+                        <p>Thanks to <a target="_blank">montas</a></p>
+                    </li>
+                    <li>
+                        <a href="data:text/html, <html contenteditable>">Text Editor(with paste format and image support)</a>
+                        <p>Thanks to <a target="_blank" href="https://coderwall.com/p/lhsrcq">Jose</a></p>
+                    </li>
+
+                </ol>
+                <ol>
+                    Drawing Canvas
+                    <li>
+                        <a href="data:text/html, <body><canvas id='dyDraw'>Your Browser does not support HTML5 Canvas</canvas></body><script>function $(id){return document.getElementById(id);} $('dyDraw').width=document.body.clientWidth;$('dyDraw').height=document.body.clientHeight;if(window.addEventListener){window.addEventListener('load',function(){var canvas,canvastext;var hua=false;function dyDrawing(){canvas=$('dyDraw');canvastext=canvas.getContext('2d');canvas.addEventListener('mousedown',canvasMouse,false);canvas.addEventListener('mousemove',canvasMouse,false);window.addEventListener('mouseup',canvasMouse,false);} function canvasMouse(dy){var x,y;if(dy.layerX||dy.layerX==0){x=dy.layerX;y=dy.layerY;}else if(dy.offsetX||dy.offsetX==0){x=dy.offsetX;y=dy.offsetY;} x-=dyDraw.offsetLeft;y-=dyDraw.offsetTop;if(dy.type=='mousedown'){hua=false;canvastext.beginPath();canvastext.moveTo(x,y);hua=true;}else if(dy.type=='mousemove'){if(hua){canvastext.strokeStyle='rgb(255,0,0)';canvastext.lineWidth=9;canvastext.lineTo(x,y);canvastext.stroke();}}else if(dy.type=='mouseup'){hua=false;}} dyDrawing();},false);}</script>">White Board</a>
+                        <p>Thanks to <a target="_blank" href="https://github.com/assassindesign"></a></p>
+                    </li>
+                </ol>
+            </ul>
+        </div>
+    </body>
+</html>
