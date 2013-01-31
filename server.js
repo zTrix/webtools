@@ -33,4 +33,4 @@ server.on('error', function (e) {
 
 module.exports = server;
 
-server.listen(80);
+server.listen(process.env['app_port'] || 80)
